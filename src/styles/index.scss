@@ -7,10 +7,25 @@
 }
 
 .header {
+  padding: 10px 0;
   &__inner {
     display: flex;
     justify-content: space-between;
   }
 }
+
+.dropdown {
+  display: flex;
+  list-style: none;
+
+  &__item {
+    margin-left: 25px;
+  }
+
+  &__item--active {
+    font-weight: 700;
+  }
+}
+
 
 

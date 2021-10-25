@@ -5,17 +5,16 @@ interface Props {
 }
 
 const Select = (props: Props) => {
-
+  const api: any = fetch('https://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=71d4cc3b96e2310c2b89b64f623f285b')
+    .then(res => res.json())
+  console.log(api);
 
   return (
-    <div className="dropdown">
-      <div className="dropdown__current"></div>
-      <ul className="dropdown__list">
-        <li className="dropdown__item">Simferopol</li>
-        <li className="dropdown__item">Moscow</li>
-        <li className="dropdown__item">New-York</li>
-      </ul>
-    </div>
+    <ul className="dropdown">
+      <li className="dropdown__item dropdown__item--active">Simferopol</li>
+      <li className="dropdown__item">Moscow</li>
+      <li className="dropdown__item">New-York</li>
+    </ul>
   )
 }
 
