@@ -1,11 +1,17 @@
 import React from 'react'
+import Header from './components/Header/Header'
 
-const App = () => {
+interface Props {
+
+}
+
+const App = (props: Props) => {
   return (
-    <div>
-      ad
+    <div className="wrapper">
+      <Header />
     </div>
   )
 }
 
 export default App
+

@@ -1,1 +1,16 @@
 @import '~normalize.css';
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
