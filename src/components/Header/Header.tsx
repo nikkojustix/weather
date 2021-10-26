@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './Logo'
-import Select from './Select'
+import Cities from './Cities'
 
 interface Props {
 
@@ -12,7 +12,7 @@ const Header = (props: Props) => {
       <div className="container">
         <div className="header__inner">
           <Logo />
-          <Select />
+          <Cities />
         </div>
       </div>
     </div>
