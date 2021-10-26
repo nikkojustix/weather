@@ -8,14 +8,14 @@ interface Props {
 
 const Header = (props: Props) => {
   return (
-    <div className="header">
+    <header className="header">
       <div className="container">
         <div className="header__inner">
           <Logo />
           <Cities />
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 
