@@ -60,7 +60,7 @@ export const MyContext = createContext({} as contextType)
 
 
 const App = (props: Props) => {
-
+  // eslint-disable-next-line
   const [data, setData] = useState<dataType>({
     coord: {
       lon: 0,
@@ -108,10 +108,10 @@ const App = (props: Props) => {
 
 
   const getCity = (e: any) => {
-    fetch(`${baseUrl}weather?q=${e.target.textContent}&units=metric&appid=${apiKey}`)
+    fetch(`${baseUrl}forecast?q=${e.target.textContent}&units=metric&lang=ru&appid=${apiKey}`)
       .then(res => res.json())
       .then(data => {
-        setData(data)
+        // setData(data)
         console.log(data);
       })
   }

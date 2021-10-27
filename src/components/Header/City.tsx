@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../../App'
-// import { baseUrl, key } from '../../utils/constants'
 
 
 interface Props {
