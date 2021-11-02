@@ -7,7 +7,7 @@ interface Props {
 
 }
 type contextType = {
-  getCity: (e: any) => void,
+  getData: (e: any) => void,
   data: dataType
 }
 
@@ -107,17 +107,17 @@ const App = (props: Props) => {
   })
 
 
-  const getCity = (e: any) => {
-    fetch(`${baseUrl}forecast?q=${e.target.textContent}&units=metric&lang=ru&appid=${apiKey}`)
+  const getData = (e: any) => {
+    fetch(`${baseUrl}weather?q=${e.target.textContent}&units=metric&lang=ru&appid=${apiKey}`)
       .then(res => res.json())
       .then(data => {
-        // setData(data)
+        setData(data)
         console.log(data);
       })
   }
 
   return (
-    <MyContext.Provider value={{ getCity, data: data }}>
+    <MyContext.Provider value={{ getData, data: data }}>
       <div className="wrapper">
         <Header />
         <Main />

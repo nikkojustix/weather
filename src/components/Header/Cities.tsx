@@ -9,9 +9,9 @@ const Cities = (props: Props) => {
 
   return (
     <ul className="dropdown">
-      <City cityName={'Simferopol'} />
-      <City cityName={'Moscow'} />
-      <City cityName={'New York'} />
+      <City cityName={'Симферополь'} />
+      <City cityName={'Москва'} />
+      <City cityName={'Нью-Йорк'} />
     </ul>
   )
 }

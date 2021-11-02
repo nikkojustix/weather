@@ -7,10 +7,10 @@ interface Props {
 }
 
 const City = ({ cityName }: Props) => {
-  const { getCity } = useContext(MyContext)
+  const { getData } = useContext(MyContext)
 
   return (
-    <li className="dropdown__item" onClick={getCity}>{cityName}</li>
+    <li className="dropdown__item" onClick={getData}>{cityName}</li>
   )
 }
 
