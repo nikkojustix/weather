@@ -41,13 +41,13 @@ body {
   &__inner {
     display: grid;
     grid-template-columns:  1fr 1fr;
-    grid-gap: 40px;
+    grid-gap: 50px;
   }
 }
 
 .current {
   &__title {
-    font-size: 60px;
+    font-size: 44px;
   }
   &__content {
     display: flex;
@@ -61,6 +61,13 @@ body {
     width: 120px;
     height: 120px;
   }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 60px 0;
 }
 
 

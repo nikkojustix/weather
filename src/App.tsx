@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import { baseUrl, apiKey } from './utils/constants'
@@ -60,7 +60,7 @@ export const MyContext = createContext({} as contextType)
 
 
 const App = (props: Props) => {
-  // eslint-disable-next-line
+
   const [data, setData] = useState<dataType>({
     coord: {
       lon: 0,
@@ -105,6 +105,22 @@ const App = (props: Props) => {
     name: '',
     cod: 0
   })
+
+  useEffect(() => {
+    fetch('https://api.ipify.org')
+      .then(res => res.text())
+      .then(data => {
+        fetch(`https://ipapi.co/${data}/json/`)
+          .then(res => res.json())
+          .then(jsonData => {
+            fetch(`${baseUrl}weather?q=${jsonData.city}&units=metric&lang=ru&appid=${apiKey}`)
+              .then(res => res.json())
+              .then(data => {
+                setData(data)
+              })
+          })
+      })
+  }, [])
 
 
   const getData = (e: any) => {

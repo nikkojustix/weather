@@ -18,7 +18,6 @@ const Current = (props: Props) => {
         <div className="current__temperature">{Math.round(data.main.temp)}<sup>o</sup>C</div>
         <img className="current__icon" src={iconUrl} alt="" />
       </div>
-      <div className="current__wind">wind speed: {data.wind.speed}</div>
 
     </div>
   )
