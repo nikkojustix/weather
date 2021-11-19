@@ -34,6 +34,30 @@ body {
   height: 65px;
 }
 
+.search {
+  width: 300px;
+
+  &__input {
+    width: 100%;
+    background-color: #4f4f4f;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    outline: none;
+    color: #fff;
+
+    &::placeholder {
+      font-size: 16px;
+      color: #fff;
+    }
+    
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+      appearance: none;
+    }
+  }
+}
+
 .dropdown {
   display: flex;
   list-style: none;
@@ -85,7 +109,8 @@ body {
 .info {
   background-image: url('../assets/images/clouds.png');
   background-repeat: no-repeat;
-  background-position-x: 110%;
+  background-position-x: right;
+  background-size: 50%;
   &__list {
     height: 100%;
     margin: 0;

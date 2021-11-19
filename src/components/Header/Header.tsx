@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from './Logo'
 import Cities from './Cities'
+import Search from './Search'
 
 interface Props {
 
@@ -12,7 +13,8 @@ const Header = (props: Props) => {
       <div className="container">
         <div className="header__inner">
           <Logo />
-          <Cities />
+          <Search />
+          {/* <Cities /> */}
         </div>
       </div>
     </header>
